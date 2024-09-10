@@ -118,14 +118,19 @@ af=pd.DataFrame(age)
 af
 ```
 ![image](https://github.com/user-attachments/assets/9ad1e4ae-ef6a-4d9e-8d68-b35110908113)
+
+
 ```
 sns.scatterplot(data=af)
 
 ```
+
 ![image](https://github.com/user-attachments/assets/53385e2c-36e9-42ad-a4ff-b55d7af8443b)
+
 ```
 sns.boxplot(data=af)
 ```
+
 ![image](https://github.com/user-attachments/assets/fcbfc0a1-461c-46e4-984c-27c245e0fdee)
 
 ```
@@ -135,6 +140,7 @@ q3=af.quantile(0.75)
 iqr=q3-q1
 iqr
 ```
+
 ![image](https://github.com/user-attachments/assets/8861e2b4-93ce-49aa-b23d-9e62e9375b46)
 
 ```
@@ -142,7 +148,10 @@ lower_bound=Q1-(1.5*IQR)
 upper_bound=Q3+(1.5*IQR)
 lower_bound,upper_bound
 ```
+
 ![image](https://github.com/user-attachments/assets/ca3b1887-0d13-4b1b-9456-80a5821b273e)
+
+
 ```
 outliers = [x for x in age if (x < lowerbound.iloc[0]) or (x > upper_bound.iloc[0])]
 # Extract the numeric values from the Series for comparison
@@ -166,6 +175,8 @@ print("mean:",mean)
 print("std",std)
 ```
 ![image](https://github.com/user-attachments/assets/e382e367-b892-4d9f-9b16-13914cedb6ca)
+
+
 ```
 threshold=3
 outlier=[]
@@ -175,14 +186,21 @@ for i in data:
     outlier.append(i)
     print('Outlier in dataset is:',outlier)
 ```
+
 ![image](https://github.com/user-attachments/assets/ae5c802a-aa5c-4c78-85a6-8df8f7caaf2d)
+
+
 ```
 import scipy as stats
 data={'weight':[12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,66,69,202,72,75,78,81,84,232,87,90,93,96,99,258]}
 df=pd.DataFrame(data)
 df
+
 ```
+
 ![image](https://github.com/user-attachments/assets/46328336-91e7-42d1-b561-73b78e6a3736)
+
+
 ```
 df=pd.DataFrame(data)
 df
@@ -190,10 +208,12 @@ df
 z=np.abs(stats.zscore(df))
 print(df[z['weight']>3])
 ```
+
 ![image](https://github.com/user-attachments/assets/bb0eb7f2-1e5e-49fb-b146-56cb36c219ba)
+```
 val=[12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,
                 66,69,202,72,75,78,81,84,232,87,90,93,96,99,258]
-```
+
 import numpy as np
 out=[]
 def d_o(val):
@@ -210,7 +230,8 @@ op=d_o(val)
 
 op
 ```
+
 ![image](https://github.com/user-attachments/assets/45c3f29e-cf72-4b0b-a520-ccc793f16e4f)
 
 # Result
-          <<include your Result here>>
+    Thus we have cleaned the data and removed the outliers by detection using IQR and Z-score method.
