@@ -74,6 +74,7 @@ df
 ```df.M1.fillna(method='FFill',inplace=True)
 df
 ```
+```
 df.isna().sum()
 ```
 
