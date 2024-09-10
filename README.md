@@ -70,8 +70,8 @@ df.TOTAL.fillna(mn,inplace=True)
 df
 ```
 ![image](https://github.com/user-attachments/assets/e7ee36e9-2e34-4b22-9881-240d65ac864d)
-```
-df.M1.fillna(method='FFill',inplace=True)
+
+```df.M1.fillna(method='FFill',inplace=True)
 df
 ```
 df.isna().sum()
