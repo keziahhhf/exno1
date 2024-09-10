@@ -122,8 +122,8 @@ af
 
 ```
 sns.scatterplot(data=af)
-
 ```
+
 
 ![image](https://github.com/user-attachments/assets/53385e2c-36e9-42ad-a4ff-b55d7af8443b)
 
@@ -210,8 +210,8 @@ print(df[z['weight']>3])
 ```
 
 ![image](https://github.com/user-attachments/assets/bb0eb7f2-1e5e-49fb-b146-56cb36c219ba)
-```
-val=[12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,
+
+```val=[12,15,18,21,24,27,30,33,36,39,42,45,48,51,54,57,60,63,
                 66,69,202,72,75,78,81,84,232,87,90,93,96,99,258]
 
 import numpy as np
